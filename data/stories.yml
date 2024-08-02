@@ -1,0 +1,48 @@
+version: "3.1"
+
+stories:
+
+#- story: happy path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+  
+- story: ask the bot what it can do
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_bot_functions
+  - action: utter_functions
+  
+- story: ask bot mood 
+  steps:
+  - intent: ask_bot_mood
+  - action: utter_bot_feel
+  
+- story: tell weather for a city
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_weather
+  - slot_was_set:
+    - city: delhi
+  - action: action_tell_weather #after this add a custom action with api call
+  
+- story: ask for city name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_weather
+  - action: utter_ask_city
+  - intent: ask_weather
+  - action: action_tell_weather
+  
+  
+  
+  
+  
+  
+  
+

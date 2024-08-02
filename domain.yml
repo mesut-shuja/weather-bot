@@ -1,0 +1,43 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_bot_mood
+  - bot_challenge
+  - ask_bot_functions
+  - ask_weather
+  
+entities:
+  - GPE
+  
+slots:
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: GPE
+  
+
+responses:
+  utter_greet:
+    - text: "Hey! What can I do for you ?"
+  utter_goodbye:
+    - text: "Bye"
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+  utter_bot_feel:
+    - text: "I am good. What can I do for you ?"
+  utter_functions:
+    - text: "I am weather-bot. I can tell weather in different cities."
+  utter_ask_city:
+    - text: "Please provide a city name to know its weather."
+
+    
+actions:
+  - action_tell_weather
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

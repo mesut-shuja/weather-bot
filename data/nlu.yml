@@ -1,0 +1,73 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    
+- intent: ask_bot_mood
+  examples: |
+    - How are you ?
+    - How do you feel ?
+    - I am good how are are you ?
+
+- intent: ask_bot_functions
+  examples: |
+    - What are u capable of ?
+    - What can you do ?
+    - Show me what you can do
+
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you 
+    - who am i talking to
+    - who is this.
+    
+- intent: ask_weather
+  examples: |
+    - whats the weather ?
+    - whats the weather in delhi ?
+    - in Bangalore.
+    - Whats the temperature in hyderabad.
+    
+    
+    
+    
+    
+
+
+
+
+
+
